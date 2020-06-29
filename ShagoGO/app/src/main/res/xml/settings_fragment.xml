@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/PedometerSettings">
+        <de.mrapp.android.preference.SeekBarPreference
+            android:dialogMessage="@string/SensitivityFullBody"
+            android:dialogTitle="@string/Sensitivity"
+            android:key="@string/SensitivityPreference"
+            android:max="30"
+            android:summary="@string/SensitivityBody"
+            android:title="@string/Sensitivity"
+            custom:dialogBackground="@android:color/white"
+            custom:dialogButtonTextColor="@android:color/black"
+            custom:dialogMessageColor="@android:color/black"
+            custom:dialogTitleColor="@android:color/black"
+            custom:dialogDisabledButtonTextColor="@android:color/black"
+            custom:min="10"
+            custom:showValueAsSummary="false"
+            custom:stepSize="1"
+            custom:useInputMethod="false"
+            custom:wrapSelectorWheel="false" />
+
+        <de.mrapp.android.preference.NumberPickerPreference
+            android:title="@string/StepWidth"
+            android:summary="@string/StepWidthBody"
+            android:key="@string/StepWidthPreference"
+            android:defaultValue="70"
+            custom:min="40"
+            android:max="120"
+            custom:useInputMethod="false"
+            custom:wrapSelectorWheel="false"
+            custom:dialogTitleColor="@android:color/black"
+            custom:dialogMessageColor="@android:color/black"
+            custom:dialogButtonTextColor="@android:color/black"
+            custom:dialogBackground="@android:color/white"
+            android:dialogMessage="@string/StepWidthBody"
+            android:dialogTitle="@string/StepWidth"
+            custom:stepSize="1"
+            custom:unit="cm"
+            custom:showValueAsSummary="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/UserSettings">
+
+        <de.mrapp.android.preference.NumberPickerPreference
+            android:dialogMessage="@string/NumberStepsPerDayBody"
+            android:dialogTitle="@string/NumberStepsPerDay"
+            android:key="@string/StepsPerDayPreference"
+            android:max="20000"
+            android:summary="@string/NumberStepsPerDayBody"
+            android:title="@string/NumberStepsPerDay"
+            custom:dialogBackground="@android:color/white"
+            custom:dialogButtonTextColor="@android:color/black"
+            custom:dialogMessageColor="@android:color/black"
+            custom:dialogTitleColor="@android:color/black"
+            custom:min="2000"
+            custom:showValueAsSummary="false"
+            custom:stepSize="100"
+            custom:unit="m"
+            custom:useInputMethod="false"
+            custom:wrapSelectorWheel="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
